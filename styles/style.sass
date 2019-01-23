@@ -1,0 +1,719 @@
+@import "variables"
+
+*
+  padding: 0
+  margin: 0
+
+.header
+  .container
+    .menu
+      .menu-left
+        height: 27px
+        background-color: $headerBgColor
+        color: $fontColorGray
+        font-size: 11px
+        font-weight: 600
+        line-height: 11px
+        text-transform: uppercase
+        font-family: $fontMettiweather
+        transition: 0.5s
+
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100%
+
+        .menu-link
+          color: $fontColorGray
+          display: block
+          text-decoration: none
+          &:hover
+            color: $hoverFontColor
+            text-decoration: none
+          &.login
+            display: none
+
+      .menu-right
+        @extend .menu-left
+        width: 206px
+        background-color: $colorWhite
+        margin: 14px auto 0
+
+        .menu-right-bag
+          display: none
+
+        .select
+          &:hover
+            color: $hoverFontColor
+          &:hover .select-value:after
+            border-color: $hoverFontColor
+
+        .select-value
+          cursor: pointer
+          position: relative
+          transition: color 0.2s
+
+          &:after
+            position: absolute
+            content: ""
+            height: 4px
+            width: 4px
+            display: block
+            transform: rotate(45deg)
+            border-bottom: 2px solid $fontColorGray
+            border-right: 2px solid $fontColorGray
+            top: 1px
+            right: -13px
+            transition: border-color 0.2s
+
+    .brand-logo
+      text-decoration: none
+      display: flex
+      justify-content: center
+      margin: 30px 0 0
+      transition: 0.2s
+      &:hover
+        filter: invert(100%)
+      .brand-name
+        color: $brandNameColor
+        font-family: "Merriweather Sans", sans-serif
+        font-size: 44px
+        font-weight: 700
+        line-height: 35px
+        text-transform: uppercase
+        margin-left: 11px
+
+    .sing-up-block
+      display: flex
+      justify-content: center
+      margin-top: 20px
+      color: $fontColorGray
+      font-family: $fontMettiweather
+      font-size: 11px
+      font-weight: 400
+      line-height: 11px
+      text-transform: uppercase
+      transition: color 0.2s
+      .sing-up-a
+        color: $fontColorGray
+        text-decoration: none
+        &:hover
+          color: $hoverFontColor
+    .search-form
+      width: 280px
+      height: 38px
+      border: 1px solid #e1e1e1
+      background-color: $colorWhite
+      margin: 24px auto 0
+
+      .search-form__input
+        width: 82%
+        height: 100%
+        border: none
+        padding: 0 10px
+
+      &::placeholder
+        color: $placeholderColor
+        font-family: $fontMettiweather
+        font-size: 13px
+        font-weight: 400
+        line-height: 13px
+
+      .fa-search
+        cursor: pointer
+        color: $placeholderColor
+        text-align: center
+        transition: color 0.2s
+
+        &:hover
+          color: $hoverFontColor
+
+    .header-bottom
+      display: flex
+      justify-content: space-between
+      height: 24px
+      align-items: center
+      width: 280px
+      margin: 25px auto 0
+
+      .nav-menu
+        display: none
+
+        .nav-menu__link
+          color: #565656
+          font-family: $fontCousine
+          font-size: 14px
+          font-weight: 700
+          padding: 5px 20px
+          line-height: 19px
+          text-decoration: none
+          text-transform: uppercase
+          transition: color 0.3s
+
+          &:hover
+            color: $hoverFontColor
+
+      .nav-button
+        display: flex
+        align-items: center
+        color: $navBarColor
+        height: 100%
+
+        &:hover
+          color: $hoverFontColor
+
+        .fa-bars
+          display: block
+          cursor: pointer
+          font-size: 16px
+          line-height: 14px
+          margin-right: 10px
+          transition: color 0.2s
+
+        .nav__header
+          @extend .fa-bars
+          font-family: $fontCousine
+          font-weight: 700
+          text-transform: uppercase
+
+      .cart
+        .cart__link
+          display: flex
+          align-items: center
+          text-decoration: none
+          color: #565656
+          &:hover
+            filter: invert(70%)
+          .link__img
+            cursor: pointer
+            margin-right: 9px
+
+          .link__total
+            text-decoration: none
+            padding-top: 5px
+            font-family: $fontCousine
+            font-size: 16px
+            font-weight: 400
+            line-height: 19px
+            text-transform: uppercase
+
+
+@media screen and (min-width: 724px)
+  .header
+    .container
+      .menu
+        display: flex
+        justify-content: space-around
+        background-color: $headerBgColor
+        .menu-left
+          background-color: transparent
+          width: 45%
+          .menu-link
+            &.login
+              display: block
+        .menu-right
+          margin: 0
+          .menu-right-bag
+            display: block
+      .logo-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        transition: 0.5s
+
+        .brand-logo
+          justify-content: flex-start
+          margin: 34px 0 30px 22px
+        .sing-up-block
+          display: none
+        .search-form
+          width: 260px
+          height: 32px
+          margin: 0 22px 0 0
+
+      .header-bottom
+        margin: 0
+        display: unset
+        .nav-button
+          display: none
+        .cart
+          display: none
+        .nav-menu
+          display: flex
+          justify-content: space-around
+
+@media screen and (min-width: 940px)
+  .header
+    .container
+      .logo-block
+        height: 75px
+        .brand-logo
+          margin: 0 0 0 20px
+          position: relative
+          top: 42px
+
+      .header-bottom
+        .nav-menu
+          justify-content: flex-end
+@media screen and (min-width: 1280px)
+  .header
+    .container
+      width: 1175px
+      margin: 0 auto
+
+.promo
+  width: 100%
+  height: 178px
+  margin-top: 23px
+  background-color: $promoBg
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .promo-inside
+    &.mobile
+      width: 300px
+      height: 140px
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      cursor: pointer
+
+      .promo__text
+        width: 246px
+        margin: 28px auto 0
+        position: relative
+        text-align: center
+        transition: 0.5s
+
+        &:before
+          content: ''
+          position: absolute
+          width: 16px
+          height: 3px
+          top: 43%
+          left: -20px
+          background-color: $colorWhite
+
+        &:after
+          @extend .promo__text:before
+          left: unset
+          right: -20px
+        .text__h1
+          color: $colorWhite
+          font-family: $fontMettiweather
+          font-size: 34px
+          font-weight: 800
+          line-height: 28px
+          text-transform: uppercase
+        .text__h3
+          @extend .text__h1
+          font-family: $fontRoboto
+          font-size: 17px
+          font-weight: 700
+          margin-top: 13px
+          line-height: 13px
+        .text__h4
+          @extend .text__h1
+          font-size: 14px
+          font-weight: 700
+          margin-top: 18px
+          line-height: 14px
+          position: relative
+
+          &:after
+            position: absolute
+            content: ""
+            height: 5px
+            width: 5px
+            top: 4px
+            right: 36px
+            transform: rotate(45deg)
+            border-top: 2px solid $colorWhite
+            border-right: 2px solid $colorWhite
+    &.wide-devises
+      height: 428px
+      display: none
+      width: 100%
+      background-color: $promoBg
+
+      .promo-container
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        .scroll-btn
+          .scroll_circle
+            cursor: pointer
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 48px
+            height: 48px
+            border: 3px solid $colorWhite
+            border-radius: 50%
+            transition: 0.3s
+
+            &:hover
+              border-color: $hoverFontColor
+            &:hover .scroll_arrow
+              border-color: $hoverFontColor
+
+            .scroll_arrow
+              width: 12px
+              height: 12px
+              position: relative
+              transform: rotate(45deg)
+              transition: 0.3s
+
+          &.left
+            margin-right: 22px
+            .scroll_arrow
+              right: 2px
+              border-radius: 13%
+              border-right: 5px solid $colorWhite
+              border-top: 5px solid $colorWhite
+
+          &.right
+            margin-left: 22px
+
+            .scroll_arrow
+              left: 2px
+              border-left: 5px solid $colorWhite
+              border-bottom: 5px solid $colorWhite
+              border-radius: 13%
+
+        .text-block
+          margin-right: 10px
+          width: 100%
+          display: flex
+          flex-direction: column
+          align-items: flex-end
+          justify-content: center
+          height: 100%
+
+          .promo__text
+            width: 341px
+            .text__h4
+              color: #555555
+              font-family: $fontCousine
+              font-size: 22px
+              font-weight: 700
+              line-height: 22px
+              text-transform: uppercase
+
+            .text__h1
+              margin: 14px 0
+              color: $colorWhite
+              font-family: $fontMettiweather
+              font-size: 75px
+              font-weight: 800
+              line-height: 60px
+              text-transform: uppercase
+
+            .text__h3
+              color: #4c4c4c
+              font-family: $fontRoboto
+              font-size: 26px
+              font-weight: 700
+              line-height: 25px
+              text-transform: uppercase
+
+            .text__link
+              display: block
+              text-decoration: none
+              margin-top: 20px
+              position: relative
+              color: $colorBlack1
+              font-family: $fontMettiweather
+              font-size: 14px
+              font-weight: 700
+              line-height: 21px
+              text-transform: uppercase
+              transition: color 0.3s
+
+              &:after
+                position: absolute
+                content: ""
+                height: 5px
+                width: 5px
+                margin-top: 7px
+                margin-left: 7px
+                transform: rotate(45deg)
+                border-top: 2px solid $colorBlack1
+                border-right: 2px solid $colorBlack1
+                transition: border-color 0.3s
+
+              &:hover
+                color: $hoverFontColor
+
+              &:hover.text__link:after
+                border-color: $hoverFontColor
+          .nav-container
+            display: none
+            width: 100px
+            margin: 0 auto
+            position: relative
+
+            .nav-block
+              bottom: -110px
+              width: 50%
+              position: absolute
+              display: flex
+              justify-content: space-between
+
+              .nav-element
+                cursor: pointer
+                width: 10px
+                height: 10px
+                border: 2px solid $colorWhite
+                border-radius: 50%
+                box-sizing: border-box
+                transition: 0.3s
+
+                &:hover
+                  background-color: $colorWhite
+
+
+@media screen and (min-width: 724px)
+  .promo
+    height: 100%
+    .promo-inside
+      &.mobile
+        display: none
+      &.wide-devises
+        display: block
+
+@media screen and (min-width: 940px)
+  .promo
+    .promo-inside
+      &.wide-devises
+        height: 546px
+        .promo-container
+          .text-block
+            .promo__text
+              width: 386px
+              .text__h4
+                font-size: 25px
+                line-height: 38px
+              .text__h1
+                font-size: 85px
+                line-height: 68px
+              .text__h3
+                font-size: 30px
+                line-height: 28px
+            .nav-container
+              display: block
+              .nav-block
+                right: -10px
+
+@media screen and (min-width: 1280px)
+  .promo
+    .promo-inside
+      &.wide-devises
+        height: 1070px
+        .promo-container
+          .text-block
+            margin-right: 348px
+            .promo__text
+              width: 455px
+              .text__h4
+                font-size: 30px
+                line-height: 45px
+              .text__h1
+                font-size: 100px
+                line-height: 80px
+              .text__h3
+                font-size: 35px
+                line-height: 33px
+            .nav-container
+              display: block
+              .nav-block
+                bottom: -340px
+                right: -150px
+
+
+.body-container
+  background-color: #f3f3f3
+  padding: 20px
+
+  .content
+    width: 280px
+    margin: 0 auto
+
+    .content-item
+      width: 280px
+      height: 189px
+      background-color: $promoBg
+      cursor: pointer
+      margin-top: 12px
+
+      &:first-of-type
+        margin-top: 0
+
+      .item-inside
+        margin-top: 12px
+        width: 260px
+        height: 112px
+        border: 1px solid rgba(255, 255, 255, 0.3)
+
+        .promo__text
+          text-align: center
+          margin: 39px 20px
+
+          .text__h1
+            width: 180px
+            margin: 0 auto
+            color: $colorWhite
+            font-family: $fontCousine
+            font-size: 21px
+            font-weight: 700
+            line-height: 21px
+            text-transform: uppercase
+            position: relative
+
+            &:before
+              position: absolute
+              content: ''
+              width: 53px
+              height: 1px
+              background-color: $colorWhite
+              top: 77%
+              left: -8px
+
+            &:after
+              @extend .text__h1:before
+              left: unset
+              right: -8px
+
+
+          .text__h3
+            color: $colorWhite
+            font-family: $fontRoboto
+            font-size: 15px
+            font-weight: 400
+            text-transform: uppercase
+
+      .text__h4
+        cursor: pointer
+        position: relative
+        display: block
+        color: $colorWhite
+        font-family: $fontMettiweather
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 14px
+        padding-top: 9px
+        transition: 0.3s
+
+        &:hover
+          color: $hoverFontColor
+        &:hover.text__h4:after
+          border-color: $hoverFontColor
+
+        &:after
+          position: absolute
+          content: ""
+          height: 5px
+          width: 5px
+          margin-top: 4px
+          margin-left: 4px
+          transform: rotate(45deg)
+          border-top: 2px solid $colorWhite
+          border-right: 2px solid $colorWhite
+
+
+      &.exclusive
+        height: 156px
+        display: flex
+        align-items: center
+        flex-direction: column
+        .item-inside
+          .promo__text
+            .text__h1
+              width: 120px
+              &:before
+                margin-left: -50px
+              &:after
+                margin-right:  -50px
+
+
+      &.hottest
+        margin: 0 auto
+        display: block
+        height: 537px
+        .item-inside
+          padding: 29px 10px 19px
+          border: none
+          height: 90%
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+
+          .promo__text
+            margin: 0
+            .text__h5
+              color: #2f2f2f
+              font-family: $fontCousine
+              font-size: 14px
+              font-weight: 700
+            .text__h1
+              color: $colorBlack1
+              font-family: $fontMettiweather
+              font-size: 20px
+              font-weight: 800
+              line-height: 31px
+              text-transform: uppercase
+
+              &:before
+                width: 40px
+                background-color: $colorBlack1
+                top: 77%
+
+                margin-left: -32px
+              &:after
+                width: 40px
+                background-color: $colorBlack1
+                top: 77%
+
+                margin-right: -32px
+
+            .text__h3
+              color: #2f2f2f
+              font-family: $fontRoboto
+              font-size: 16px
+              font-weight: 700
+              text-transform: uppercase
+
+          .text__h4
+            display: block
+            width: 40%
+            margin: 0 auto
+
+      &.look-book
+        height: 401px
+
+
+
+@media screen and (min-width: 724px)
+  .body-container
+    .content
+      width: 100%
+
+      .content-item
+        width: 228px
+        margin: 0
+        height: 154px
+
+        &.exclusive
+          margin: 0
+          width: 476px
+          height: 266px
+          background-color: #cccccc
+        &.hottest
+          height: 432px
+          margin: 0
+
+        &.look-book
+          width: 228px
+          height: 328px
