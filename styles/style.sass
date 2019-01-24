@@ -262,7 +262,7 @@
       margin: 0 auto
 
 .promo
-  width: 100%
+  padding: 19px 10px
   height: 178px
   margin-top: 23px
   background-color: $promoBg
@@ -272,7 +272,7 @@
 
   .promo-inside
     &.mobile
-      width: 300px
+      width: 100%
       height: 140px
       border: 1px solid rgba(255, 255, 255, 0.3)
       cursor: pointer
@@ -537,22 +537,20 @@
   padding: 20px
 
   .content
-    width: 280px
-    margin: 0 auto
-
     .content-item
-      width: 280px
+      padding: 12px 10px
       height: 189px
       background-color: $promoBg
       cursor: pointer
       margin-top: 12px
+      margin-bottom: 20px
 
       &:first-of-type
         margin-top: 0
 
       .item-inside
-        margin-top: 12px
-        width: 260px
+        //margin-top: 12px
+        width: 100%
         height: 112px
         border: 1px solid rgba(255, 255, 255, 0.3)
 
@@ -622,7 +620,6 @@
           border-top: 2px solid $colorWhite
           border-right: 2px solid $colorWhite
 
-
       &.exclusive
         height: 156px
         display: flex
@@ -636,7 +633,6 @@
                 margin-left: -50px
               &:after
                 margin-right:  -50px
-
 
       &.hottest
         margin: 0 auto
@@ -697,10 +693,13 @@
 
 @media screen and (min-width: 724px)
   .body-container
+    padding: 20px 0 0
+
     .content
       width: 724px
       height: 614px
       display: flex
+      margin: 0 auto
       flex-wrap: wrap
       flex-direction: column
       .items-container
@@ -717,14 +716,17 @@
 
         .content-item
           height: 154px
+          padding: 0
 
       .content-item
         width: 228px
         margin: 0
         height: 162px
+        padding: 0
         order: 2
 
         &.exclusive
+          padding: 0
           margin: 0
           width: 476px
           height: 266px
@@ -733,11 +735,29 @@
 
         &.hottest
           height: 432px
-          margin: 0
           order: 2
-          margin-bottom: 20px
+          margin: 0 0 20px
+
+          .item-inside
+            margin: 0
+            padding: 0
+            width: 100%
+            border: none
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: self-start
+            justify-content: space-between
+
+            .text__h4
+              width: 100%
+              margin-bottom: 20px
 
         &.look-book
           width: 228px
           height: 328px
           margin-left: 20px
+
+        &.item-inside
+          width: 100%
+          padding: 0
