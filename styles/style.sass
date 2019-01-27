@@ -543,7 +543,7 @@
 .body-container
   background-color: #f3f3f3
   width: 100%
-  padding: 20px 0
+  padding: 30px 0
 
   .content
     .items-container
@@ -1143,6 +1143,7 @@
 
 @media screen and (min-width: 1280px)
   .body-container
+    padding: 60px 0
     .content
       width: 1170px
       height: 990px
@@ -1509,12 +1510,112 @@
   background-color: #1f1f1f
   .info-container
     .info-column
+      &.navigation
+        .info-row
+          .nav
+            display: flex
+            flex-direction: column
+            .nav-link
+              text-decoration: none
+              color: #888888
+              font-family: "Arial", sans-serif
+              font-size: 14px
+              font-weight: 400
+              line-height: 35px
+              transition: color 0.2s
+              &:hover
+                color: $hoverFontColor
       .info-row
         padding: 40px 20px
-        border-bottom: 1px dotted  #333333
+        border-bottom: 1px dotted  #888888
+        &.socials
+          .info-statistic
+            color: #888888
+            font-family: "Arial", sans-serif
+            font-size: 14px
+            font-weight: 400
+            line-height: 18.03px
+            letter-spacing: -0.35px
+            .brand-name
+              color: #cccccc
+          .photos-container
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .statistic__photo
+              margin-top: 23px
+              width: 70px
+              height: 70px
+              border: 5px solid #2f2f2f
+              background-color: $promoBg
+          &:hover .row-header .follow_link
+            display: block
+        .info-user
+          margin-bottom: 50px
+          display: flex
+          flex-wrap: wrap
+          text-align: justify
+          &:last-child
+            margin-bottom: 0
+          .user__photo
+            width: 34px
+            height: 34px
+            margin-right: 20px
+            margin-bottom: 26px
+          .user__name
+            .nickname
+              margin-bottom: 2px
+              color: #b1b1b1
+              font-family: $fontRoboto
+              font-size: 17px
+              font-weight: 400
+              line-height: 18px
+              text-transform: uppercase
+            .link
+              text-decoration: none
+              margin-top: 8px
+              color: #777777
+              font-family: "Arial", sans-serif
+              font-size: 13px
+              font-weight: 400
+              line-height: 18.01px
+              transition: color 0.5s
+              &:hover
+                color: $hoverFontColor
+          .user__text
+            color: #888888
+            font-family: "Arial", sans-serif
+            font-size: 14px
+            font-weight: 400
+            line-height: 20px
+            .link
+              color: #cccccc
+              transition: color 0.3s
+              &:hover
+                color: $hoverFontColor
+
+            .text__footer
+              margin-top: 8px
+              display: flex
+              justify-content: space-between
+              color: #666666
+              font-family: "Arial", sans-serif
+              font-size: 13px
+              font-weight: 400
+              line-height: 26.02px
+              .buttons
+                display: flex
+                .btn
+                  margin-left: 10px
+                  color: #666666
+                  transition: 0.3s
+                  &:hover
+                    color: $hoverFontColor
+
+
         .contacts-form
           position: relative
-          width: 280px
+          width: 250px
           .email-submit-btn
             cursor: pointer
             position: absolute
@@ -1532,7 +1633,7 @@
           .input
             padding: 17px 10px
             color: $placeholderColor
-            width: 260px
+            width: 228px
             cursor: pointer
             outline: none
             background-color: #1f1f1f
@@ -1576,13 +1677,30 @@
           line-height: 20px
           text-transform: uppercase
         .row-header
+          align-items: center
+          margin-bottom: 10px
           display: flex
           justify-content: space-between
+          .follow_link
+            display: none
+            height: 22px
+            text-decoration: none
+            padding: 0 10px
+            color: #b5b5b5
+            font-family: $fontMettiweather
+            font-size: 12px
+            font-weight: 400
+            line-height: 26px
+            text-transform: uppercase
+            border: 1px solid #b5b5b5
+            &:hover
+              color: $hoverFontColor
+              border-color: $hoverFontColor
+
           .info-row__h1
             color: #b6b6b6
             font-size: 16px
             line-height: 40px
-            margin-bottom: 29px
           .scroll
             display: flex
             width: 100px
@@ -1615,6 +1733,42 @@
 
               &:hover .scroll_circle .scroll_arrow
                 border-color: $hoverFontColor
+        .favorite-items
+          display: flex
+          justify-content: space-around
+          .favorite-item
+            width: 130px
+            cursor: pointer
+            transition: 0.3s
+            .favorite__photo
+              width: 130px
+              height: 169px
+              background-color: #cccccc
+            .favorite__text
+              padding: 19px 0
+              .text__desc
+                color: #888888
+                font-family: $fontMettiweather
+                font-size: 12px
+                font-weight: 400
+                line-height: 18px
+              .item-price
+                display: flex
+
+                .text__price
+                  margin-top: 15px
+                  width: 33px
+                  height: 11px
+                  color: $colorWhite
+                  font-family: $fontCousine
+                  font-size: 14px
+                  font-weight: 400
+                  line-height: 17px
+                  &.old-price
+                    margin-right: 10px
+                    color: #8c8b8b
+                    text-decoration: line-through
+
       .info-row__img
         float: left
         width: 120px
@@ -1628,14 +1782,14 @@
           background-color: $promoBg
 
         &.blog__img
-          width: 280px
+          width: 250px
           height: 205px
           background-color: $promoBg
           float: unset
         &.map__img
           cursor: pointer
           position: relative
-          width: 280px
+          width: 250px
           height: 130px
           background: url("../images/map.jpg") no-repeat
           .fa-map-marker-alt
@@ -1677,3 +1831,134 @@
           color: $hoverFontColor
         &:hover &:after
           border-color: $hoverFontColor
+
+
+
+@media screen and (min-width: 724px)
+  .info-block
+    .info-container
+      display: flex
+      .info-column
+        &.navigation
+          .info-row
+            .nav
+              .nav-link
+        .info-row
+          width: 273px
+          padding: 40px 15px
+          border-right: 1px dotted #888888
+
+          &.socials
+            .info-statistic
+              .brand-name
+            .photos-container
+              .statistic__photo
+          .info-user
+            &:last-child
+            .user__photo
+            .user__name
+              .nickname
+              .link
+            .user__text
+              .link
+
+
+              .text__footer
+
+                .buttons
+
+                  .btn
+
+                    &:hover
+
+
+
+          .contacts-form
+
+            .email-submit-btn
+
+              &:hover
+
+            .input
+
+
+          &.contacts
+            .contacts-form
+              .input
+                &.contacts-form__textarea
+
+
+            .info-row__h3
+
+          .info-row__h1
+
+          .row-header
+
+            .follow_link
+
+
+            .info-row__h1
+              font-size: 16px
+
+            .scroll
+
+              .scroll-btn
+
+                &.right
+                  .scroll_circle
+                    .scroll_arrow
+
+                &.left
+                  .scroll_circle
+                    .scroll_arrow
+
+                &.left,
+                &.right
+                  .scroll_circle
+
+                    .scroll_arrow
+
+                &:hover .scroll_circle
+
+
+                &:hover .scroll_circle .scroll_arrow
+
+          .favorite-items
+
+            .favorite-item
+              width: 218px
+              &:last-of-type
+                display: none
+
+              .favorite__photo
+                width: 100%
+                height: 285px
+              .favorite__text
+
+                .text__desc
+
+                .item-price
+
+
+                  .text__price
+
+                    &.old-price
+
+
+        .info-row__img
+
+          &.favorite
+
+          &.blog__img
+
+          &.map__img
+
+            .fa-map-marker-alt
+
+        .info-row__p
+
+
+        .info-row__h3
+
+
+

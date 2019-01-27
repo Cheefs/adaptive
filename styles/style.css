@@ -460,7 +460,7 @@
 .body-container {
   background-color: #f3f3f3;
   width: 100%;
-  padding: 20px 0; }
+  padding: 30px 0; }
   .body-container .content .items-container {
     margin-top: 20px; }
     .body-container .content .items-container .content-item .promo__text {
@@ -989,103 +989,105 @@
         width: 100%;
         padding: 0; } }
 @media screen and (min-width: 1280px) {
-  .body-container .content {
-    width: 1170px;
-    height: 990px; }
-    .body-container .content .items-container {
-      width: 770px;
-      height: 530px; }
-      .body-container .content .items-container .content-item {
-        width: 370px;
-        height: 250px; }
-        .body-container .content .items-container .content-item .text__h4 {
-          margin-bottom: 20px; }
-        .body-container .content .items-container .content-item .promo__text .text__h1, .body-container .content .items-container .content-item .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .items-container .content-item .promo__text .text__h3, .body-container .content .items-container .content-item .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .items-container .content-item .promo__text .text__h4 {
-          font-size: 40px;
-          line-height: 40px; }
-        .body-container .content .items-container .content-item .promo__text .text__h3 {
-          font-size: 23px;
-          line-height: 22px; }
-    .body-container .content .content-item {
-      width: 370px;
-      height: 250px;
-      margin-top: 20px; }
-      .body-container .content .content-item .text__h1, .body-container .content .content-item .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .promo__text .body-container .content .content-item .text__h3, .body-container .content .content-item .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .promo__text .body-container .content .content-item .text__h4 {
-        font-size: 30px;
-        line-height: 22px; }
-      .body-container .content .content-item.accessories .promo__text .text__h1, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4 {
-        font-size: 30px;
-        line-height: 22px; }
-        .body-container .content .content-item.accessories .promo__text .text__h1:before, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3:before, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3:before, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4:before, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4:before, .body-container .content .content-item.accessories .content-item.exclusive .exclusive-container .item-inside.page__2 .promo__text .text__h1:after, .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 .content-item.accessories .promo__text .text__h1:after, .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 .promo .promo-inside.mobile .content-item.accessories .promo__text .text__h3:after, .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 .promo .promo-inside.mobile .content-item.accessories .promo__text .text__h4:after, .body-container .content .content-item.accessories .promo__text .text__h1:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4:after {
-          width: 50px; }
-        .body-container .content .content-item.accessories .promo__text .text__h1:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4:after {
-          width: 50px; }
-      .body-container .content .content-item.accessories .promo__text .text__h3 {
-        font-size: 25px;
-        font-weight: 400;
-        line-height: 22px; }
-      .body-container .content .content-item.exclusive {
+  .body-container {
+    padding: 60px 0; }
+    .body-container .content {
+      width: 1170px;
+      height: 990px; }
+      .body-container .content .items-container {
         width: 770px;
-        height: 430px; }
-        .body-container .content .content-item.exclusive .exclusive-container .item-inside {
-          display: none; }
-          .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 {
-            display: block; }
-      .body-container .content .content-item.hottest {
+        height: 530px; }
+        .body-container .content .items-container .content-item {
+          width: 370px;
+          height: 250px; }
+          .body-container .content .items-container .content-item .text__h4 {
+            margin-bottom: 20px; }
+          .body-container .content .items-container .content-item .promo__text .text__h1, .body-container .content .items-container .content-item .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .items-container .content-item .promo__text .text__h3, .body-container .content .items-container .content-item .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .items-container .content-item .promo__text .text__h4 {
+            font-size: 40px;
+            line-height: 40px; }
+          .body-container .content .items-container .content-item .promo__text .text__h3 {
+            font-size: 23px;
+            line-height: 22px; }
+      .body-container .content .content-item {
         width: 370px;
-        height: 710px;
-        margin: 0; }
-        .body-container .content .content-item.hottest .item-inside {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          border: none;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          text-align: center; }
-          .body-container .content .content-item.hottest .item-inside .promo__text {
-            margin-top: 65px; }
-            .body-container .content .content-item.hottest .item-inside .promo__text .text__h1, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4 {
-              width: 225px;
-              font-weight: 600;
-              font-size: 25px;
-              line-height: 40px; }
-              .body-container .content .content-item.hottest .item-inside .promo__text .text__h1:before, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3:before, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3:before, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4:before, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4:before, .body-container .content .content-item.hottest .item-inside .promo__text .text__h1:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4:after, .body-container .content .content-item.hottest .content-item.exclusive .exclusive-container .item-inside.page__2 .promo__text .text__h1:after, .body-container .content .content-item.exclusive .exclusive-container .content-item.hottest .item-inside.page__2 .promo__text .text__h1:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .content-item.hottest .item-inside .promo__text .text__h3:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .content-item.hottest .item-inside .promo__text .text__h4:after {
-                width: 50px;
-                margin-left: -47px; }
-              .body-container .content .content-item.hottest .item-inside .promo__text .text__h1:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4:after {
-                width: 50px;
-                margin-right: -47px; }
-            .body-container .content .content-item.hottest .item-inside .promo__text .text__h5 {
+        height: 250px;
+        margin-top: 20px; }
+        .body-container .content .content-item .text__h1, .body-container .content .content-item .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .promo__text .body-container .content .content-item .text__h3, .body-container .content .content-item .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .promo__text .body-container .content .content-item .text__h4 {
+          font-size: 30px;
+          line-height: 22px; }
+        .body-container .content .content-item.accessories .promo__text .text__h1, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4 {
+          font-size: 30px;
+          line-height: 22px; }
+          .body-container .content .content-item.accessories .promo__text .text__h1:before, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3:before, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3:before, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4:before, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4:before, .body-container .content .content-item.accessories .content-item.exclusive .exclusive-container .item-inside.page__2 .promo__text .text__h1:after, .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 .content-item.accessories .promo__text .text__h1:after, .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 .promo .promo-inside.mobile .content-item.accessories .promo__text .text__h3:after, .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 .promo .promo-inside.mobile .content-item.accessories .promo__text .text__h4:after, .body-container .content .content-item.accessories .promo__text .text__h1:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4:after {
+            width: 50px; }
+          .body-container .content .content-item.accessories .promo__text .text__h1:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h3:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.accessories .promo__text .text__h4:after {
+            width: 50px; }
+        .body-container .content .content-item.accessories .promo__text .text__h3 {
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 22px; }
+        .body-container .content .content-item.exclusive {
+          width: 770px;
+          height: 430px; }
+          .body-container .content .content-item.exclusive .exclusive-container .item-inside {
+            display: none; }
+            .body-container .content .content-item.exclusive .exclusive-container .item-inside.page__2 {
+              display: block; }
+        .body-container .content .content-item.hottest {
+          width: 370px;
+          height: 710px;
+          margin: 0; }
+          .body-container .content .content-item.hottest .item-inside {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center; }
+            .body-container .content .content-item.hottest .item-inside .promo__text {
+              margin-top: 65px; }
+              .body-container .content .content-item.hottest .item-inside .promo__text .text__h1, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4 {
+                width: 225px;
+                font-weight: 600;
+                font-size: 25px;
+                line-height: 40px; }
+                .body-container .content .content-item.hottest .item-inside .promo__text .text__h1:before, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3:before, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3:before, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4:before, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4:before, .body-container .content .content-item.hottest .item-inside .promo__text .text__h1:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4:after, .body-container .content .content-item.hottest .content-item.exclusive .exclusive-container .item-inside.page__2 .promo__text .text__h1:after, .body-container .content .content-item.exclusive .exclusive-container .content-item.hottest .item-inside.page__2 .promo__text .text__h1:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .content-item.hottest .item-inside .promo__text .text__h3:after, .body-container .content .content-item.accessories .promo .promo-inside.mobile .content-item.hottest .item-inside .promo__text .text__h4:after {
+                  width: 50px;
+                  margin-left: -47px; }
+                .body-container .content .content-item.hottest .item-inside .promo__text .text__h1:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h3:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h3:after, .body-container .content .content-item.hottest .item-inside .promo .promo-inside.mobile .promo__text .text__h4:after, .promo .promo-inside.mobile .body-container .content .content-item.hottest .item-inside .promo__text .text__h4:after {
+                  width: 50px;
+                  margin-right: -47px; }
+              .body-container .content .content-item.hottest .item-inside .promo__text .text__h5 {
+                font-size: 18px;
+                line-height: 40px; }
+              .body-container .content .content-item.hottest .item-inside .promo__text .text__h3 {
+                font-size: 20px;
+                line-height: 40px; }
+            .body-container .content .content-item.hottest .item-inside .text__h4 {
+              width: 100%;
+              margin-bottom: 20px; }
+        .body-container .content .content-item.look-book {
+          width: 370px;
+          height: 530px; }
+          .body-container .content .content-item.look-book .text__h4 {
+            margin-bottom: -140px; }
+          .body-container .content .content-item.look-book .promo__text {
+            margin-top: 200px; }
+            .body-container .content .content-item.look-book .promo__text .text__h1, .body-container .content .content-item.look-book .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .content-item.look-book .promo__text .text__h3, .body-container .content .content-item.look-book .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .content-item.look-book .promo__text .text__h4 {
+              font-size: 35px;
+              line-height: 35px; }
+            .body-container .content .content-item.look-book .promo__text .text__h5 {
               font-size: 18px;
               line-height: 40px; }
-            .body-container .content .content-item.hottest .item-inside .promo__text .text__h3 {
-              font-size: 20px;
+            .body-container .content .content-item.look-book .promo__text .text__h2 {
+              font-size: 30px;
               line-height: 40px; }
-          .body-container .content .content-item.hottest .item-inside .text__h4 {
-            width: 100%;
-            margin-bottom: 20px; }
-      .body-container .content .content-item.look-book {
-        width: 370px;
-        height: 530px; }
-        .body-container .content .content-item.look-book .text__h4 {
-          margin-bottom: -140px; }
-        .body-container .content .content-item.look-book .promo__text {
-          margin-top: 200px; }
-          .body-container .content .content-item.look-book .promo__text .text__h1, .body-container .content .content-item.look-book .promo .promo-inside.mobile .promo__text .text__h3, .promo .promo-inside.mobile .body-container .content .content-item.look-book .promo__text .text__h3, .body-container .content .content-item.look-book .promo .promo-inside.mobile .promo__text .text__h4, .promo .promo-inside.mobile .body-container .content .content-item.look-book .promo__text .text__h4 {
-            font-size: 35px;
-            line-height: 35px; }
-          .body-container .content .content-item.look-book .promo__text .text__h5 {
-            font-size: 18px;
-            line-height: 40px; }
-          .body-container .content .content-item.look-book .promo__text .text__h2 {
-            font-size: 30px;
-            line-height: 40px; }
-      .body-container .content .content-item.item-inside {
-        width: 100%;
-        padding: 0; } }
+        .body-container .content .content-item.item-inside {
+          width: 100%;
+          padding: 0; } }
 .products-container {
   margin-top: 60px; }
   .products-container .nav-menu {
@@ -1308,12 +1310,105 @@
   margin-top: 80px;
   width: 100%;
   background-color: #1f1f1f; }
+  .info-block .info-container .info-column.navigation .info-row .nav {
+    display: flex;
+    flex-direction: column; }
+    .info-block .info-container .info-column.navigation .info-row .nav .nav-link {
+      text-decoration: none;
+      color: #888888;
+      font-family: "Arial", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 35px;
+      transition: color 0.2s; }
+      .info-block .info-container .info-column.navigation .info-row .nav .nav-link:hover {
+        color: #cf4647; }
   .info-block .info-container .info-column .info-row {
     padding: 40px 20px;
-    border-bottom: 1px dotted #333333; }
+    border-bottom: 1px dotted #888888; }
+    .info-block .info-container .info-column .info-row.socials .info-statistic {
+      color: #888888;
+      font-family: "Arial", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.03px;
+      letter-spacing: -0.35px; }
+      .info-block .info-container .info-column .info-row.socials .info-statistic .brand-name {
+        color: #cccccc; }
+    .info-block .info-container .info-column .info-row.socials .photos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .info-block .info-container .info-column .info-row.socials .photos-container .statistic__photo {
+        margin-top: 23px;
+        width: 70px;
+        height: 70px;
+        border: 5px solid #2f2f2f;
+        background-color: #cccccc; }
+    .info-block .info-container .info-column .info-row.socials:hover .row-header .follow_link {
+      display: block; }
+    .info-block .info-container .info-column .info-row .info-user {
+      margin-bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: justify; }
+      .info-block .info-container .info-column .info-row .info-user:last-child {
+        margin-bottom: 0; }
+      .info-block .info-container .info-column .info-row .info-user .user__photo {
+        width: 34px;
+        height: 34px;
+        margin-right: 20px;
+        margin-bottom: 26px; }
+      .info-block .info-container .info-column .info-row .info-user .user__name .nickname {
+        margin-bottom: 2px;
+        color: #b1b1b1;
+        font-family: "Roboto Condensed", sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: uppercase; }
+      .info-block .info-container .info-column .info-row .info-user .user__name .link {
+        text-decoration: none;
+        margin-top: 8px;
+        color: #777777;
+        font-family: "Arial", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18.01px;
+        transition: color 0.5s; }
+        .info-block .info-container .info-column .info-row .info-user .user__name .link:hover {
+          color: #cf4647; }
+      .info-block .info-container .info-column .info-row .info-user .user__text {
+        color: #888888;
+        font-family: "Arial", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px; }
+        .info-block .info-container .info-column .info-row .info-user .user__text .link {
+          color: #cccccc;
+          transition: color 0.3s; }
+          .info-block .info-container .info-column .info-row .info-user .user__text .link:hover {
+            color: #cf4647; }
+        .info-block .info-container .info-column .info-row .info-user .user__text .text__footer {
+          margin-top: 8px;
+          display: flex;
+          justify-content: space-between;
+          color: #666666;
+          font-family: "Arial", sans-serif;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 26.02px; }
+          .info-block .info-container .info-column .info-row .info-user .user__text .text__footer .buttons {
+            display: flex; }
+            .info-block .info-container .info-column .info-row .info-user .user__text .text__footer .buttons .btn {
+              margin-left: 10px;
+              color: #666666;
+              transition: 0.3s; }
+              .info-block .info-container .info-column .info-row .info-user .user__text .text__footer .buttons .btn:hover {
+                color: #cf4647; }
     .info-block .info-container .info-column .info-row .contacts-form {
       position: relative;
-      width: 280px; }
+      width: 250px; }
       .info-block .info-container .info-column .info-row .contacts-form .email-submit-btn {
         cursor: pointer;
         position: absolute;
@@ -1330,7 +1425,7 @@
       .info-block .info-container .info-column .info-row .contacts-form .input {
         padding: 17px 10px;
         color: #888888;
-        width: 260px;
+        width: 228px;
         cursor: pointer;
         outline: none;
         background-color: #1f1f1f;
@@ -1370,13 +1465,29 @@
       line-height: 20px;
       text-transform: uppercase; }
     .info-block .info-container .info-column .info-row .row-header {
+      align-items: center;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between; }
+      .info-block .info-container .info-column .info-row .row-header .follow_link {
+        display: none;
+        height: 22px;
+        text-decoration: none;
+        padding: 0 10px;
+        color: #b5b5b5;
+        font-family: "Merriweather Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        border: 1px solid #b5b5b5; }
+        .info-block .info-container .info-column .info-row .row-header .follow_link:hover {
+          color: #cf4647;
+          border-color: #cf4647; }
       .info-block .info-container .info-column .info-row .row-header .info-row__h1 {
         color: #b6b6b6;
         font-size: 16px;
-        line-height: 40px;
-        margin-bottom: 29px; }
+        line-height: 40px; }
       .info-block .info-container .info-column .info-row .row-header .scroll {
         display: flex;
         width: 100px;
@@ -1402,6 +1513,40 @@
             border-color: #cf4647; }
           .info-block .info-container .info-column .info-row .row-header .scroll .scroll-btn:hover .scroll_circle .scroll_arrow {
             border-color: #cf4647; }
+    .info-block .info-container .info-column .info-row .favorite-items {
+      display: flex;
+      justify-content: space-around; }
+      .info-block .info-container .info-column .info-row .favorite-items .favorite-item {
+        width: 130px;
+        cursor: pointer;
+        transition: 0.3s; }
+        .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__photo {
+          width: 130px;
+          height: 169px;
+          background-color: #cccccc; }
+        .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__text {
+          padding: 19px 0; }
+          .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__text .text__desc {
+            color: #888888;
+            font-family: "Merriweather Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px; }
+          .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__text .item-price {
+            display: flex; }
+            .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__text .item-price .text__price {
+              margin-top: 15px;
+              width: 33px;
+              height: 11px;
+              color: #ffffff;
+              font-family: "Cousine", monospace;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px; }
+              .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__text .item-price .text__price.old-price {
+                margin-right: 10px;
+                color: #8c8b8b;
+                text-decoration: line-through; }
   .info-block .info-container .info-column .info-row__img {
     float: left;
     width: 120px;
@@ -1414,14 +1559,14 @@
       height: 285px;
       background-color: #cccccc; }
     .info-block .info-container .info-column .info-row__img.blog__img {
-      width: 280px;
+      width: 250px;
       height: 205px;
       background-color: #cccccc;
       float: unset; }
     .info-block .info-container .info-column .info-row__img.map__img {
       cursor: pointer;
       position: relative;
-      width: 280px;
+      width: 250px;
       height: 130px;
       background: url("../images/map.jpg") no-repeat; }
       .info-block .info-container .info-column .info-row__img.map__img .fa-map-marker-alt {
@@ -1462,5 +1607,22 @@
       color: #cf4647; }
     .info-block .info-container .info-column .info-row__h3:hover .info-block .info-container .info-column .info-row__h3:after {
       border-color: #cf4647; }
+
+@media screen and (min-width: 724px) {
+  .info-block .info-container {
+    display: flex; }
+    .info-block .info-container .info-column .info-row {
+      width: 273px;
+      padding: 40px 15px;
+      border-right: 1px dotted #888888; }
+      .info-block .info-container .info-column .info-row .row-header .info-row__h1 {
+        font-size: 16px; }
+      .info-block .info-container .info-column .info-row .favorite-items .favorite-item {
+        width: 218px; }
+        .info-block .info-container .info-column .info-row .favorite-items .favorite-item:last-of-type {
+          display: none; }
+        .info-block .info-container .info-column .info-row .favorite-items .favorite-item .favorite__photo {
+          width: 100%;
+          height: 285px; } }
 
 /*# sourceMappingURL=style.css.map */
