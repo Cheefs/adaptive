@@ -3,6 +3,81 @@
 *
   padding: 0
   margin: 0
+.btn
+  text-decoration: none
+  display: block
+  color: $colorBlack1
+  font-family: $fontMettiweather
+  transition: color 0.3s
+  &:hover
+    color: $hoverFontColor
+
+.scroll-btn
+  .scroll_circle
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    border: 3px solid $colorWhite
+    border-radius: 50%
+    transition: 0.3s
+
+    &:hover
+      border-color: $hoverFontColor
+    &:hover .scroll_arrow
+      border-color: $hoverFontColor
+
+    .scroll_arrow
+      width: 12px
+      height: 12px
+      position: relative
+      transform: rotate(45deg)
+      transition: 0.3s
+
+  &.left
+    margin-right: 22px
+    .scroll_arrow
+      right: 2px
+      border-radius: 13%
+      border-right: 5px solid $colorWhite
+      border-top: 5px solid $colorWhite
+
+  &.right
+    margin-left: 22px
+
+    .scroll_arrow
+      left: 2px
+      border-left: 5px solid $colorWhite
+      border-bottom: 5px solid $colorWhite
+      border-radius: 13%
+
+
+.nav-container
+  display: none
+  width: 100px
+  margin: 0 auto
+  position: relative
+
+  .nav-block
+    bottom: -110px
+    width: 50%
+    position: absolute
+    display: flex
+    justify-content: space-between
+
+    .nav-element
+      cursor: pointer
+      width: 10px
+      height: 10px
+      border: 2px solid $colorWhite
+      border-radius: 50%
+      box-sizing: border-box
+      transition: 0.3s
+
+      &:hover
+        background-color: $colorWhite
 
 .header
   .container
@@ -341,47 +416,6 @@
         align-items: center
         justify-content: space-between
 
-        .scroll-btn
-          .scroll_circle
-            cursor: pointer
-            display: flex
-            justify-content: center
-            align-items: center
-            width: 48px
-            height: 48px
-            border: 3px solid $colorWhite
-            border-radius: 50%
-            transition: 0.3s
-
-            &:hover
-              border-color: $hoverFontColor
-            &:hover .scroll_arrow
-              border-color: $hoverFontColor
-
-            .scroll_arrow
-              width: 12px
-              height: 12px
-              position: relative
-              transform: rotate(45deg)
-              transition: 0.3s
-
-          &.left
-            margin-right: 22px
-            .scroll_arrow
-              right: 2px
-              border-radius: 13%
-              border-right: 5px solid $colorWhite
-              border-top: 5px solid $colorWhite
-
-          &.right
-            margin-left: 22px
-
-            .scroll_arrow
-              left: 2px
-              border-left: 5px solid $colorWhite
-              border-bottom: 5px solid $colorWhite
-              border-radius: 13%
-
         .text-block
           margin-right: 10px
           width: 100%
@@ -448,31 +482,6 @@
 
               &:hover.text__link:after
                 border-color: $hoverFontColor
-          .nav-container
-            display: none
-            width: 100px
-            margin: 0 auto
-            position: relative
-
-            .nav-block
-              bottom: -110px
-              width: 50%
-              position: absolute
-              display: flex
-              justify-content: space-between
-
-              .nav-element
-                cursor: pointer
-                width: 10px
-                height: 10px
-                border: 2px solid $colorWhite
-                border-radius: 50%
-                box-sizing: border-box
-                transition: 0.3s
-
-                &:hover
-                  background-color: $colorWhite
-
 
 @media screen and (min-width: 724px)
   .promo
@@ -531,32 +540,64 @@
                 bottom: -340px
                 right: -150px
 
-
 .body-container
   background-color: #f3f3f3
-  padding: 20px
+  width: 100%
+  padding: 30px 0
 
   .content
+    .items-container
+      margin-top: 20px
+      .content-item
+        .promo__text
+          margin-top: 47px
+          .text__h1
+            margin-bottom: 11px
+      .text__h4
+        margin-bottom: 10px
     .content-item
-      padding: 12px 10px
       height: 189px
       background-color: $promoBg
       cursor: pointer
       margin-top: 12px
       margin-bottom: 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-direction: column
+
+      .text__h1
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        color: $colorWhite
+        font-family: $fontRoboto
+        font-size: 28px
+        font-weight: 700
+        line-height: 22px
+        text-transform: uppercase
+      .promo__text
+        .text__h3
+          color: $colorWhite
+          font-family: $fontRoboto
+          font-size: 20px
+          font-weight: 700
+          line-height: 19px
+          text-transform: uppercase
 
       &:first-of-type
         margin-top: 0
 
       .item-inside
-        //margin-top: 12px
-        width: 100%
+        text-align: center
         height: 112px
         border: 1px solid rgba(255, 255, 255, 0.3)
 
         .promo__text
           text-align: center
           margin: 39px 20px
+          transition: 0.5s
 
           .text__h1
             width: 180px
@@ -582,7 +623,6 @@
               @extend .text__h1:before
               left: unset
               right: -8px
-
 
           .text__h3
             color: $colorWhite
@@ -625,14 +665,91 @@
         display: flex
         align-items: center
         flex-direction: column
-        .item-inside
-          .promo__text
-            .text__h1
-              width: 120px
-              &:before
-                margin-left: -50px
-              &:after
-                margin-right:  -50px
+        .text__h4
+          margin-bottom: 10px
+        .exclusive-container
+          width: 100%
+
+          .scroll-btn
+            display: none
+            .scroll_circle
+              width: 32px
+              height: 32px
+              &:hover .scroll_arrow
+                border-color: $hoverFontColor
+            .scroll_arrow
+              width: 8px
+              height: 8px
+            &.right
+              margin: 0
+              .scroll_arrow
+                border-left: 4px solid #fff
+                border-bottom: 4px solid #fff
+            &.left
+              margin: 0
+              .scroll_arrow
+                border-right: 4px solid #fff
+                border-top: 4px solid #fff
+          .item-inside
+            width: 90%
+            margin: 0 auto
+            margin-top: 10px
+            &.page__2
+              margin: 0
+              width: 100%
+              border: none
+              display: none
+              .promo__text
+                margin: 0
+                .text__h3
+                  color: $colorWhite
+                  font-family: $fontCousine
+                  font-size: 23px
+                  font-weight: 400
+                  line-height: 40px
+                .text__h1
+                  line-height: 100px
+                  width: 100%
+                  color: $colorWhite
+                  font-family: $fontCousine
+                  font-size: 100px
+                  font-weight: 700
+                  text-transform: uppercase
+                  &:before
+                    content: none
+                  &:after
+                    @extend  .text__h1:before
+                .text__span
+                  display: block
+                  margin: 0 auto
+                  width: 70px
+                  height: 2px
+                  background-color: $colorWhite
+                .text__h2
+                  color: $colorWhite
+                  font-family: $fontMettiweather
+                  font-size: 30px
+                  line-height: 40px
+                  text-transform: uppercase
+                  letter-spacing: 3.9px
+                  font-weight: 800
+                .text__h4
+                  color: $colorWhite
+                  font-family: $fontRoboto
+                  font-weight: 700
+                  line-height: 22px
+                  text-transform: uppercase
+                  font-size: 17px
+                  &:after
+                    content: none
+
+            .promo__text
+              .text__h1
+                width: 150px
+                &:before
+                  margin-left: -35px
+                &:after
+                  margin-right:  -35px
 
       &.hottest
         margin: 0 auto
@@ -647,7 +764,7 @@
           justify-content: space-between
 
           .promo__text
-            margin: 0
+            margin: 21px 0 0
             .text__h5
               color: #2f2f2f
               font-family: $fontCousine
@@ -686,22 +803,84 @@
             width: 40%
             margin: 0 auto
 
+      &.accessories
+        .promo__text
+          .text__h1
+            position: relative
+            &:before
+              position: absolute
+              content: ''
+              width: 42px
+              height: 3px
+              background-color: $colorWhite
+              top: 77%
+              left: -35px
+
+            &:after
+              @extend .text__h1:before
+              left: unset
+              right: -35px
       &.look-book
         height: 401px
 
+        .text__h4
+          margin-bottom: -130px
+        .nav-container
+          display: flex
+          justify-content: center
+          .nav-block
+            position: unset
+            width: 50%
+            display: flex
+            justify-content: space-between
+            margin-bottom: 22px
+
+        .promo__text
+          color: $colorWhite
+          font-family: $fontCousine
+          text-transform: uppercase
+          text-align: center
+          margin-top: 74px
+          .text__h1
+            font-family: $fontRoboto
+            font-size: 35px
+            font-weight: 700
+            line-height: 22px
+          .text__h5
+            font-size: 18px
+            font-weight: 700
+            line-height: 40px
+            position: relative
+            &:before
+              position: absolute
+              content: ''
+              width: 80px
+              height: 1px
+              left: -20px
+              bottom: 20px
+              background-color: $colorWhite
+            &:after
+              @extend .text__h5:before
+              left: unset
+              right: -20px
+          .text__h2
+            font-size: 30px
+            font-weight: 700
+            line-height: 40px
 
 
 @media screen and (min-width: 724px)
   .body-container
-    padding: 20px 0 0
-
     .content
-      width: 724px
+      width: 735px
+      margin: 0 auto
       height: 614px
       display: flex
-      margin: 0 auto
       flex-wrap: wrap
       flex-direction: column
+      justify-content: space-around
+      align-items: center
+
       .items-container
         width: 476px
         height: 328px
@@ -709,14 +888,20 @@
         flex-wrap: wrap
         flex-direction: column
         order: 1
-
         margin-top: 20px
-        margin-right: 20px
         justify-content: space-between
 
         .content-item
           height: 154px
           padding: 0
+
+          .promo__text
+            .text__h1
+              font-size: 25px
+              line-height: 14px
+            .text__h3
+              font-size: 15px
+              line-height: 14px
 
       .content-item
         width: 228px
@@ -730,14 +915,60 @@
           margin: 0
           width: 476px
           height: 266px
-          background-color: #cccccc
+          background-color: $promoBg
           order: 1
+
+          .text__h4
+            font-size: 14px
+            margin-bottom: 20px
+            padding: 0
+            line-height: 14px
+          .exclusive-container
+            display: flex
+            align-items: center
+            justify-content: space-around
+            height: 100%
+            margin-top: 34px
+
+            .item-inside
+              width: 320px
+              height: 138px
+              .promo__text
+                .text__h1
+                  width: 180px
+                  font-size: 26px
+                  line-height: 25px
+
+                .text__h3
+                  font-size: 17px
+                  line-height: 25px
+
+            .scroll-btn
+              display: block
+              .scroll_circle
+                width: 32px
+                height: 32px
+              .scroll_arrow
+                width: 8px
+                height: 8px
+                &:hover
+                  border-color: #ffb805
+              &.right
+                margin-left: 15px
+                .scroll_arrow
+                  border-left: 4px solid #fff
+                  border-bottom: 4px solid #fff
+
+              &.left
+                margin-right: 15px
+                .scroll_arrow
+                  border-right: 4px solid #fff
+                  border-top: 4px solid #fff
 
         &.hottest
           height: 432px
           order: 2
           margin: 0 0 20px
-
           .item-inside
             margin: 0
             padding: 0
@@ -746,18 +977,1240 @@
             height: 100%
             display: flex
             flex-direction: column
-            align-items: self-start
             justify-content: space-between
-
+            text-align: center
+            .promo__text
+              margin-top: 50px
+              .text__h1
+                font-size: 17px
+                line-height: 17px
+                &:before
+                  width: 30px
+                  margin-left: -10px
+                &:after
+                  width: 30px
+                  margin-right: -10px
+              .text__h5
+                font-size: 13px
+                line-height: 13px
+              .text__h3
+                font-size: 13px
+                line-height: 13px
             .text__h4
               width: 100%
               margin-bottom: 20px
+
+        &.accessories
+          .promo__text
+            .text__h1
+              &:before,
+              &:after
+                width: 30px
+                height: 2px
 
         &.look-book
           width: 228px
           height: 328px
           margin-left: 20px
+          .text__h4
+            margin-bottom: -75px
+          .promo__text
+            .text__h1
+              font-size: 30px
+              line-height: 19px
+            .text__h5
+              font-size: 15px
+              line-height: 35px
+              &:before
+                width: 71px
+                left: -20px
+              &:after
+                left: unset
+                width: 71px
+                right: -20px
+            .text__h2
+              font-size: 27px
+              font-weight: 700
+              line-height: 35px
+        &.item-inside
+          width: 100%
+          padding: 0
+@media screen and (min-width: 940px)
+  .body-container
+    .content
+      width: 952px
+      height: 792px
+      .items-container
+        width: 620px
+        height: 426px
+        .content-item
+          width: 300px
+          height: 203px
+          .promo__text
+            .text__h1
+              font-size: 32px
+              line-height: 18px
+            .text__h3
+              font-size: 19px
+              line-height: 18px
+          .text__h4
+            margin-bottom: 59px
+      .content-item
+        width: 300px
+        height: 203px
+        margin-top: 20px
+        &.accessories
+          .promo__text
+            .text__h1
+              font-size: 25px
+              line-height: 18px
+              &:before
+                width: 41px
+                height: 2px
+              &:after
+                width: 41px
+                height: 2px
+
+            .text__h3
+              font-size: 20px
+              line-height: 18px
+
+        &.exclusive
+          width: 620px
+          height: 346px
+          .exclusive-container
+            .item-inside
+              width: 422px
+              height: 177px
+              .promo__text
+                .text__h1
+                  font-size: 34px
+                  line-height: 33px
+                  &:before
+                    margin-left: -55px
+                  &:after
+                    margin-right: -55px
+                .text__h3
+                  font-size: 22px
+                  line-height: 33px
+        &.hottest
+          width: 300px
+          height: 569px
+          background-color: $promoBg
+          margin: 0
+          .item-inside
+            margin: 0
+            padding: 0
+            width: 100%
+            border: none
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            text-align: center
+            .promo__text
+              margin-top: 65px
+              .text__h1
+                font-size: 20px
+                line-height: 32px
+                &:before
+                  width: 40px
+                  margin-left: -35px
+                &:after
+                  width: 40px
+                  margin-right: -35px
+              .text__h5
+                font-size: 15px
+                line-height: 15px
+              .text__h3
+                font-size: 15px
+                line-height: 15px
+            .text__h4
+              width: 100%
+              margin-bottom: 20px
+
+        &.look-book
+          width: 300px
+          height: 426px
+          margin-top: 0
+          margin-left: 20px
+
+          .text__h4
+            margin-bottom: -175px
+        &.item-inside
+          width: 100%
+          padding: 0
+
+@media screen and (min-width: 1280px)
+  .body-container
+    padding: 60px 0
+    .content
+      width: 1170px
+      height: 990px
+      .items-container
+        width: 770px
+        height: 530px
+        .content-item
+          width: 370px
+          height: 250px
+          .text__h4
+            margin-bottom: 20px
+          .promo__text
+            .text__h1
+              font-size: 40px
+              line-height: 40px
+            .text__h3
+              font-size: 23px
+              line-height: 22px
+
+      .content-item
+        width: 370px
+        height: 250px
+        margin-top: 20px
+
+        .text__h1
+          font-size: 30px
+          line-height: 22px
+        &.accessories
+          .promo__text
+            .text__h1
+              font-size: 30px
+              line-height: 22px
+              &:before
+                width: 50px
+              &:after
+                width: 50px
+            .text__h3
+              font-size: 25px
+              font-weight: 400
+              line-height: 22px
+
+        &.exclusive
+          width: 770px
+          height: 430px
+          .exclusive-container
+            .item-inside
+              display: none
+              &.page__2
+                display: block
+        &.hottest
+          width: 370px
+          height: 710px
+          margin: 0
+          .item-inside
+            margin: 0
+            padding: 0
+            width: 100%
+            border: none
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            text-align: center
+            .promo__text
+              margin-top: 65px
+              .text__h1
+                width: 225px
+                font-weight: 600
+                font-size: 25px
+                line-height: 40px
+                &:before
+                  width: 50px
+                  margin-left: -47px
+                &:after
+                  width: 50px
+                  margin-right: -47px
+              .text__h5
+                font-size: 18px
+                line-height: 40px
+              .text__h3
+                font-size: 20px
+                line-height: 40px
+            .text__h4
+              width: 100%
+              margin-bottom: 20px
+
+        &.look-book
+          width: 370px
+          height: 530px
+          .text__h4
+            margin-bottom: -140px
+          .promo__text
+            margin-top: 200px
+            .text__h1
+              font-size: 35px
+              line-height: 35px
+            .text__h5
+              font-size: 18px
+              line-height: 40px
+            .text__h2
+              font-size: 30px
+              line-height: 40px
 
         &.item-inside
           width: 100%
           padding: 0
+
+
+.products-container
+  margin-top: 60px
+  .nav-menu
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    transition: 0.2s
+    .menu__link
+      text-decoration: none
+      padding: 9px 0
+      color: #999999
+      font-family: $fontMettiweather
+      font-size: 16px
+      font-weight: 800
+      line-height: 19px
+      text-transform: uppercase
+      &:hover
+        color: $hoverFontColor
+      &.selected
+        border-bottom: 2px solid #444444
+
+  .products-block
+    .product
+      cursor: pointer
+      width: 280px
+      height: 530px
+      margin: 0 auto
+      &:hover .product__text .controls
+        display: block
+
+      &:hover .product__photo .colours
+        display: flex
+      .product__photo
+        position: relative
+        width: 100%
+        height: 364px
+        background-color: $promoBg
+        .info-label
+          position: absolute
+          padding: 4px 14px
+          left: -3px
+          top: 10px
+          color: #524656
+          font-family: "Arial", sans-serif
+          font-size: 17px
+          font-weight: 400
+          line-height: 17px
+          border: 3px solid #524656
+
+          &.discount
+            color: #cf4647
+            border-color: #cf4647
+          &.out-of-stack
+            color: #999999
+            border-color: #999999
+
+        .colours
+          position: absolute
+          display: none
+          justify-content: space-between
+          width: 95px
+          bottom: 10px
+          left: 10px
+          .color__item
+            width: 25px
+            height: 25px
+            box-shadow: inset 0 0 0 2px $colorWhite
+            border: 1px solid #555555
+            transition: 0.5s
+            &:hover
+              box-shadow: inset 0 0 0 2px green
+      .product__text
+        padding: 20px 0 0
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .product__desc
+          .name
+            color: #444444
+            font-family: $fontMettiweather
+            font-size: 13px
+            font-weight: 400
+            line-height: 19px
+          .brand
+            @extend .name
+          .stars
+            margin-top: 6px
+            .fa-star
+              color: #777777
+              &.not-set
+                color: #d0d0d0
+              &:hover
+                color: $hoverFontColor
+
+        .product_price
+          color: #222222
+          font-family: $fontCousine
+          font-size: 15px
+          font-weight: 700
+          line-height: 17px
+          .old-price
+            color: #999999
+        .controls
+          width: 100%
+          display: none
+          .product__buttons
+            box-sizing: border-box
+            margin-top: 13px
+            height: 34px
+            align-items: center
+            display: flex
+            justify-content: space-between
+            width: 100%
+            border: 2px solid #444444
+            .btn
+              height: 16px
+              padding: 0 25px
+              font-size: 14px
+              font-weight: 700
+              line-height: 14px
+              text-transform: uppercase
+              &:first-of-type
+                border-right: 2px solid #444444
+          .help-btns
+            margin-top: 8px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .btn
+              font-size: 13px
+              font-style: italic
+              line-height: 17px
+      &.wide__screen
+        display: none
+      &.extra-wide__screen
+        display: none
+
+
+@media screen and (min-width: 724px)
+  .products-container
+    margin-top: 60px
+    .nav-menu
+      flex-direction: row
+      margin-bottom: 28px
+      justify-content: space-around
+    .products-block
+      display: flex
+      width: 748px
+      margin: 0 auto
+      flex-wrap: wrap
+      .product
+        width: 228px
+        &.wide__screen
+          display: block
+          &.wide__screen:last-of-type
+            display: none
+
+        &:hover .product__text .controls
+          display: block
+
+        &:hover .product__photo .colours
+          display: flex
+        .product__photo
+          position: relative
+          width: 100%
+          height: 364px
+          background-color: $promoBg
+
+        .product__text
+          .controls
+            .product__buttons
+              .btn
+                padding: 0 12px
+
+@media screen and (min-width: 910px)
+  .products-container
+    margin-top: 60px
+    .products-block
+      //width: 748px
+      width: 950px
+      margin: 0 auto
+      .product
+        width: 300px
+        height: 523px
+        .product__photo
+          position: relative
+          width: 100%
+          height: 364px
+          background-color: $promoBg
+
+        .product__text
+          .controls
+            .product__buttons
+              .btn
+                padding: 0 28px
+
+@media screen and (min-width: 1200px)
+  .products-container
+    width: 1170px
+    margin: 55px auto 0
+    .products-block
+      width: 100%
+      .product
+        width: 270px
+
+        &.extra-wide__screen
+          display: block
+
+        &:nth-child(-n+4)
+          margin-top: 0
+        .product__photo
+          position: relative
+          width: 100%
+          height: 351px
+          background-color: $promoBg
+
+        .product__text
+          .controls
+            .product__buttons
+              .btn
+                padding: 0 20px
+
+.show-more
+  display: flex
+  justify-content: space-around
+
+  .btn-show-more
+    text-decoration: none
+    display: block
+    color: #555555
+    font-family: $fontMettiweather
+    font-size: 14px
+    font-weight: 700
+    line-height: 17px
+    text-transform: uppercase
+    transition: 0.5s
+    &:hover
+      color: $hoverFontColor
+
+  .line
+    width: 26%
+    height: 1px
+    background-color: #dddddd
+    position: relative
+    top: 6px
+@media screen and (min-width: 724px)
+  .show-more
+    .line
+      width: 35%
+
+
+.info-block
+  margin-top: 80px
+  width: 100%
+  background-color: #1f1f1f
+  .info-container
+    .info-column
+      &:first-of-type
+        border-left: none
+      border-left: 1px dotted #2a2a2a
+      &.navigation
+        .info-row
+          .nav
+            display: flex
+            flex-direction: column
+            .nav-link
+              text-decoration: none
+              color: #888888
+              font-family: "Arial", sans-serif
+              font-size: 14px
+              font-weight: 400
+              line-height: 35px
+              transition: color 0.2s
+              &:hover
+                color: $hoverFontColor
+      .info-row
+        padding: 40px 20px
+        border-bottom: 1px dotted  #2a2a2a
+        &:last-of-type
+          border: none
+        &.socials
+          .info-statistic
+            color: #888888
+            font-family: "Arial", sans-serif
+            font-size: 14px
+            font-weight: 400
+            line-height: 18.03px
+            letter-spacing: -0.35px
+            .brand-name
+              color: #cccccc
+          .photos-container
+            width: 260px
+            margin: 0 auto
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .statistic__photo
+              margin-top: 23px
+              width: 70px
+              height: 70px
+              border: 5px solid #2f2f2f
+              background-color: $promoBg
+              &.wide-screen
+                display: none
+          &:hover .row-header .follow_link
+            display: block
+        .info-user
+          margin-bottom: 50px
+          display: flex
+          flex-wrap: wrap
+          text-align: justify
+          &:last-child
+            margin-bottom: 0
+          .user__photo
+            width: 34px
+            height: 34px
+            margin-right: 20px
+            margin-bottom: 26px
+          .user__name
+            .nickname
+              margin-bottom: 2px
+              color: #b1b1b1
+              font-family: $fontRoboto
+              font-size: 17px
+              font-weight: 400
+              line-height: 18px
+              text-transform: uppercase
+            .link
+              text-decoration: none
+              margin-top: 8px
+              color: #777777
+              font-family: "Arial", sans-serif
+              font-size: 13px
+              font-weight: 400
+              line-height: 18.01px
+              transition: color 0.5s
+              &:hover
+                color: $hoverFontColor
+          .user__text
+            color: #888888
+            font-family: "Arial", sans-serif
+            font-size: 14px
+            font-weight: 400
+            line-height: 20px
+            .link
+              color: #cccccc
+              transition: color 0.3s
+              &:hover
+                color: $hoverFontColor
+
+            .text__footer
+              margin-top: 8px
+              display: flex
+              justify-content: space-between
+              color: #666666
+              font-family: "Arial", sans-serif
+              font-size: 13px
+              font-weight: 400
+              line-height: 26.02px
+              flex-wrap: wrap
+              .buttons
+                display: flex
+                .btn
+                  margin-left: 10px
+                  color: #666666
+                  transition: 0.3s
+                  &:hover
+                    color: $hoverFontColor
+
+
+        .contacts-form
+          position: relative
+          width: 95%
+          .email-submit-btn
+            cursor: pointer
+            position: absolute
+            height: 12px
+            width: 12px
+            transform: rotate(45deg)
+            border-top: 2px solid #999999
+            border-right: 2px solid #999999
+            top: 19px
+            right: 10px
+            transition: 0.3s
+            &:hover
+              border-color: $hoverFontColor
+
+          .input
+            padding: 17px 10px
+            color: $placeholderColor
+            width: 100%
+            cursor: pointer
+            outline: none
+            background-color: #1f1f1f
+            border: 1px solid #666666
+            &:hover
+              background-color: $colorWhite
+              color: $colorBlack1
+            &::placeholder
+              color: #888888
+              font-family: $fontCousine
+              font-size: 13px
+              font-weight: 400
+              line-height: 20px
+              text-transform: uppercase
+              padding: 40px 20px
+              border-bottom: 1px dotted  #888888
+
+        &.contacts
+          .contacts-form
+            .input
+              padding: 10px
+              margin-top: 10px
+              &.contacts-form__textarea
+                height: 90px
+              &::placeholder
+                font-size: 12px
+                line-height: 22px
+
+          .info-row__h3
+            cursor: pointer
+            transition: 0.2s
+            &:hover
+              color: $hoverFontColor
+            &:hover &:after
+              border-color: $hoverFontColor
+        .info-row__h1
+          color: #999999
+          font-family: $fontCousine
+          font-size: 15px
+          font-weight: 400
+          line-height: 20px
+          text-transform: uppercase
+        .row-header
+          align-items: center
+          margin-bottom: 10px
+          display: flex
+          justify-content: space-between
+          .follow_link
+            display: none
+            height: 22px
+            text-decoration: none
+            padding: 0 10px
+            color: #b5b5b5
+            font-family: $fontMettiweather
+            font-size: 12px
+            font-weight: 400
+            line-height: 26px
+            text-transform: uppercase
+            border: 1px solid #b5b5b5
+            &:hover
+              color: $hoverFontColor
+              border-color: $hoverFontColor
+
+          .info-row__h1
+            color: #b6b6b6
+            font-size: 16px
+            line-height: 40px
+          .scroll
+            display: flex
+            width: 100px
+            height: 40px
+            align-items: center
+            justify-content: space-between
+            .scroll-btn
+              cursor: pointer
+              &.right
+                .scroll_circle
+                  .scroll_arrow
+                    border-left: 2px solid #999999
+                    border-bottom: 2px solid #999999
+              &.left
+                .scroll_circle
+                  .scroll_arrow
+                    border-right: 2px solid #999999
+                    border-top: 2px solid #999999
+              &.left,
+              &.right
+                .scroll_circle
+                  border: 2px solid #999999
+                  height: 20px
+                  width: 20px
+                  .scroll_arrow
+                    width: 6px
+                    height: 6px
+              &:hover .scroll_circle
+                border-color: $hoverFontColor
+
+              &:hover .scroll_circle .scroll_arrow
+                border-color: $hoverFontColor
+        .favorite-items
+          display: flex
+          justify-content: space-around
+          .favorite-item
+            width: 130px
+            cursor: pointer
+            transition: 0.3s
+            .favorite__photo
+              width: 130px
+              height: 169px
+              background-color: #cccccc
+            .favorite__text
+              padding: 19px 0
+              .text__desc
+                color: #888888
+                font-family: $fontMettiweather
+                font-size: 12px
+                font-weight: 400
+                line-height: 18px
+              .item-price
+                display: flex
+
+                .text__price
+                  margin-top: 15px
+                  width: 33px
+                  height: 11px
+                  color: $colorWhite
+                  font-family: $fontCousine
+                  font-size: 14px
+                  font-weight: 400
+                  line-height: 17px
+                  &.old-price
+                    margin-right: 10px
+                    color: #8c8b8b
+                    text-decoration: line-through
+
+      .container
+        .img
+          &:last-of-type
+            display: none
+
+      .info-row__img
+        float: left
+        width: 120px
+        height: 120px
+        background-color: $promoBg
+        margin-bottom: 16px
+        margin-right: 19px
+        &.favorite
+          width: 218px
+          height: 285px
+          background-color: $promoBg
+
+        &.blog__img
+          width: 250px
+          height: 205px
+          background-color: $promoBg
+          float: unset
+        &.map__img
+          cursor: pointer
+          position: relative
+          width: 100%
+          height: 130px
+          background: url("../images/map940.jpg") no-repeat
+          .fa-map-marker-alt
+            font-size: 31px
+            position: absolute
+            top: 29px
+            left: 103px
+            &:hover
+              color: $hoverFontColor
+      .info-row__p
+        color: #888888
+        font-family: "Arial", sans-serif
+        font-size: 14px
+        font-weight: 400
+        line-height: 20px
+        text-align: justify
+
+      .info-row__h3
+        cursor: pointer
+        margin-top: 17px
+        color: #b6b6b6
+        font-family: $fontMettiweather
+        font-size: 12px
+        font-weight: 700
+        line-height: 20px
+        text-transform: uppercase
+        position: relative
+        &:after
+          position: absolute
+          content: ""
+          height: 5px
+          width: 5px
+          margin-top: 6px
+          margin-left: 4px
+          transform: rotate(45deg)
+          border-top: 2px solid #b6b6b6
+          border-right: 2px solid #b6b6b6
+        &:hover
+          color: $hoverFontColor
+        &:hover &:after
+          border-color: $hoverFontColor
+
+
+
+@media screen and (min-width: 724px)
+  .info-block
+    .info-container
+      display: flex
+      width: 724px
+      margin: 0 auto
+      .info-column
+        width: 280px
+        .info-row
+          padding: 40px 15px
+          &.socials
+            .photos-container
+              width: 100%
+              .statistic__photo
+                width: 55px
+                height: 55px
+
+          .row-header
+            .info-row__h1
+              font-size: 16px
+
+          .favorite-items
+
+            .favorite-item
+              width: 218px
+              &:last-of-type
+                display: none
+
+              .favorite__photo
+                width: 100%
+                height: 285px
+
+@media screen and (min-width: 940px)
+  .info-block
+    .info-container
+      display: flex
+      width: 940px
+      margin: 0 auto
+      .info-column
+        width: 500px
+        &.socials
+          width: 350px
+        &.navigation
+          width: unset
+        .info-row
+          padding: 40px 15px
+          .info-statistic
+            .photos-container
+              .statistic__photo
+                height: 60px
+                width: 60px
+          &.socials
+            .photos-container
+              width: 247px
+              justify-content: space-between
+              .statistic__photo
+                width: 55px
+                height: 55px
+
+          .row-header
+            .info-row__h1
+              font-size: 16px
+
+          .favorite-items
+
+            .favorite-item
+              width: 135px
+
+              &:last-of-type
+                display: block
+
+              .favorite__photo
+                width: 100%
+                height: 177px
+          .map__img
+            width: 100%
+          .container
+            width: 370px
+            display: flex
+            justify-content: space-between
+            .img
+              width: 175px
+              .info-row__img
+                &.blog__img
+                  width: 100%
+                  height: 128px
+
+              &:last-of-type
+                display: block
+
+@media screen and (min-width: 940px)
+  .info-block
+    .info-container
+      display: flex
+      width: 940px
+      margin: 0 auto
+      .info-column
+        width: 500px
+        &.socials
+          width: 350px
+        &.navigation
+          width: unset
+        .info-row
+          padding: 40px 15px
+          .info-statistic
+            .photos-container
+              .statistic__photo
+                height: 60px
+                width: 60px
+          &.socials
+            .photos-container
+              width: 247px
+              justify-content: space-between
+              .statistic__photo
+                width: 55px
+                height: 55px
+
+          .row-header
+            .info-row__h1
+              font-size: 16px
+          .info-row__img
+            width: 170px
+            height: 170px
+          .favorite-items
+
+            .favorite-item
+              width: 135px
+
+              &:last-of-type
+                display: block
+
+              .favorite__photo
+                width: 100%
+                height: 177px
+          .map__img
+            width: 100%
+          .container
+            width: 370px
+            display: flex
+            justify-content: space-between
+            .img
+              width: 175px
+              .info-row__img
+                &.blog__img
+                  width: 100%
+                  height: 128px
+
+              &:last-of-type
+                display: block
+
+@media screen and (min-width: 1280px)
+  .info-block
+    .info-container
+      display: flex
+      width: 1170px
+      margin: 0 auto
+      .info-column
+        width: 500px
+        &.socials
+          width: 350px
+
+        &.navigation
+          width: unset
+        .info-row
+          padding: 40px 15px
+          .info-row__h3
+            margin-right: 20px
+          &.contacts
+            text-align: right
+            .form-container
+              display: flex
+              .contacts-form
+                width: 215px
+          .info-statistic
+            .photos-container
+              width: 100%
+              .statistic__photo
+                height: 60px
+                width: 60px
+                &.wide-screen
+                  display: block
+
+          .row-header
+            .info-row__h1
+              font-size: 16px
+          .info-row__img
+            width: 180px
+            height: 180px
+
+          .favorite-items
+
+            .favorite-item
+              width: 135px
+
+              &:last-of-type
+                display: block
+
+              .favorite__photo
+                width: 100%
+                height: 177px
+          .map__img
+            width: 215px
+            height: 215px
+            background: url("../images/map1280.jpg") no-repeat
+            .fa-map-marker-alt
+              top: 37px
+              left: 78px
+
+          &.blog
+            .container
+              width: 100%
+              .img
+                width: 205px
+                .info-row__img
+
+                  &.blog__img
+                    width: 100%
+                    height: 150px
+
+footer
+  &.footer
+    border-top: 1px dotted #2a2a2a
+    padding: 35px 0
+    background-color: #1f1f1f
+    .container
+      width: 300px
+      margin: 0 auto
+      .btn-to-top
+        margin-top: 18px
+        cursor: pointer
+        position: relative
+        width: 45px
+        height: 45px
+        border: 2px solid #999999
+        border-radius: 50%
+        transition: 0.3s
+        &:hover
+          border-color: $hoverFontColor
+        &:hover .arrow
+          border-color: $hoverFontColor
+
+        .arrow
+          top: 16px
+          left: 14px
+          height: 15px
+          width: 15px
+          position: absolute
+          border-top: 3px solid #999999
+          border-left: 3px solid #999999
+          border-radius: 10%
+          transform: rotate(45deg)
+          transition: 0.3s
+
+      .copy
+        transition: 0.5s
+        margin-top: 9px
+        .copy__h3
+          color: #666666
+          font-family: "Arial", sans-serif
+          font-size: 12px
+          font-weight: 400
+          line-height: 18px
+      .footer-left
+        .payments
+          display: flex
+          justify-content: space-between
+
+      .footer-right
+        margin-top: 10px
+        .footer-btn
+          flex-wrap: wrap
+          display: flex
+          justify-content: space-between
+          .btn
+            margin-bottom: 10px
+            color: #999999
+            box-sizing: border-box
+            width: 40px
+            font-size: 22px
+            height: 40px
+            border: 2px solid #999999
+            display: flex
+            align-items: center
+            justify-content: center
+            &:hover
+              border-color: $hoverFontColor
+              color: $hoverFontColor
+
+
+@media screen and (min-width: 724px)
+  footer
+    &.footer
+      .container
+        width: 95%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        .btn-to-top
+          right: 333px
+        .copy
+          margin-top: -50px
+        .footer-left
+          width: 40%
+        .footer-right
+          width: 50%
+
+@media screen and (min-width: 940px)
+  footer
+    &.footer
+      .container
+        .btn-to-top
+          top: -70px
+          left: 0
+          &:hover
+            border-color: $hoverFontColor
+          &:hover .arrow
+            border-color: $hoverFontColor
+        .footer-right
+          width: 40%
+          margin-right: 70px
+
+
+@media screen and (min-width: 1280px)
+  footer
+    &.footer
+      .container
+        margin: 0 auto
+        width: 1170px
+        display: flex
+        justify-content: space-between
+        .copy
+          margin-top: 0
+        .btn-to-top
+          display: none
+        .footer-left
+          width: 50%
+          .payments
+            display: flex
+            width: 350px
+            justify-content: space-between
+
+        .footer-right
+          width: unset
+          margin-right: 0
+          .footer-btn
+            width: 355px
+            display: flex
+            justify-content: space-between
+            .btn
+              color: #999999
+              box-sizing: border-box
+              width: 40px
+              font-size: 22px
+              height: 40px
+              border: 2px solid #999999
+
+              display: flex
+              align-items: center
+              justify-content: center
+              &:hover
+                border-color: $hoverFontColor
+                color: $hoverFontColor
+
+
